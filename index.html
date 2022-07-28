@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style-switcher.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -59,7 +60,7 @@
                             Hi,<br> I'am
                             <span class="auto-typing">Yassine</span>
                         </h1>
-                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">Welcome to our website, if you need any service or assistance in your project, contact me.</p>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">Web developer and designer, I love the field of informatics and in the future I seek to developer the web.</p>
                         <div class="btn-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                             <span>Know more</span>
                             <a class="btn" href="#about"><i class="fa-solid fa-arrow-right"></i></a>
@@ -452,15 +453,37 @@
         </footer>
         <!--------- End Footer Section ---------->
 
-
-
-
-
     </div>
     <!--------- End Wrapper ---------->
 
+    <!-- Style switcher Start -->
+    <div class="style-switcher js-style-switcher">
+        <button type="button" class="style-switcher-toggler js-style-switcher-toggler">
+            <i class="fa-solid fa-gear"></i>
+        </button>
+        <div class="style-switcher-main">
+            <h2>Style switcher</h2>
+            <div class="style-switcher-item">
+                <p>Theme color</p>
+                <div class="theme-color">
+                    <input type="range" min="0" max="360" class="hue-slider js-hue-slider" />
+                    <div class="hue">Hue: <span class="js-hue"></span></div>
+                </div>
+            </div>
+            <div class="style-switcher-item">
+                <label class="form-switcher">
+                    <span>Dark Mode</span>
+                    <input type="checkbox" class="js-dark-mode" />
+                    <div class="box"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- Style switcher End -->
 
 
+
+    <script src="./js/style-switcher.js "></script>
     <script src="./js/main.js "></script>
 </body>
 

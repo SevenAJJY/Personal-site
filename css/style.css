@@ -9,6 +9,7 @@
     --satueation: 70%;
     --lightness: 55%;
     --main-color: hsl(var(--hue), var(--satueation), var(--lightness));
+    --main-color-dcv: hsl(var(--hue) var(--satueation) var(--lightness) / 82%);
     --main-color-light: hsl(var(--hue) var(--satueation) var(--lightness) / 31%);
     --main-color-x-light: hsl(var(--hue) var(--satueation) var(--lightness) / 12%);
     --gradient-hover-img: to bottom, hsl(var(--hue) var(--satueation) var(--lightness) / 1%) 0, hsl(var(--hue) var(--satueation) var(--lightness) / 25%) 25%, hsl(var(--hue) var(--satueation) var(--lightness) / 80%) 75%, hsl(var(--hue) var(--satueation) var(--lightness) / 100%) 100%;
@@ -45,23 +46,7 @@ body.t-dark {
     --text-dark-gray: hsl(0, 0%, 84%);
     /************ bg Colors *************/
     --body-bg-color: hsl(var(--hue), 20%, 10%);
-    --bg-body: hsl(var(--hue), 13%, 17%);
-    /************ Border Colors *************/
-    --border-color: hsl(var(--hue), 15%, 30%);
-    /************ shadow Colors *************/
-    --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
-}
-
-
-/************ Override variables for dark theme *************/
-
-body.t-dark {
-    /************ Text Colors *************/
-    --text-x-dark-gray: hsl(0, 0%, 94%);
-    --text-dark-gray: hsl(0, 0%, 84%);
-    /************ bg Colors *************/
-    --body-bg-color: hsl(var(--hue), 20%, 10%);
-    --bg-body: hsl(var(--hue), 13%, 17%);
+    --bg-color: hsl(var(--hue), 13%, 17%);
     /************ Border Colors *************/
     --border-color: hsl(var(--hue), 15%, 30%);
     /************ shadow Colors *************/
@@ -94,6 +79,7 @@ body {
     color: var(--text-dark-gray);
     background-color: var(--body-bg-color);
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -506,8 +492,9 @@ img {
     width: 300px;
     padding: 5px;
     background-color: var(--bg-color);
-    /* box-shadow: var(--shadow); */
     position: relative;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 .img-box img {
@@ -582,7 +569,7 @@ img {
     position: relative;
     height: 50px;
     width: 220px;
-    background: var(--main-color);
+    background: var(--main-color-dcv);
     border-radius: 55px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -633,7 +620,7 @@ img {
 
 .content i,
 .content .button-text {
-    color: #fff;
+    color: var(--bg-white);
     font-size: 20px;
 }
 
@@ -1510,3 +1497,74 @@ textarea.contact__input {
 
 
 /************  End Section Footer *************/
+
+
+/************  Start Section Responsive *************/
+
+@media (max-width:1199px) {
+    .about-img .box-1 {
+        top: 100%;
+        left: 50%;
+    }
+}
+
+@media (max-width:991px) {
+    /************ Variables *************/
+     :root {
+        --fs-4xl: 42px;
+        --fs-3xl: 31px;
+        --fs-2xl: 24px;
+    }
+    /************ Home *************/
+    .home-img img {
+        max-width: 250px;
+    }
+    .home-img .circle-wrap .circle {
+        height: 250px;
+        width: 250px;
+    }
+    /************ Services *************/
+    .services-item .img-box {
+        height: 120px;
+        width: 120px;
+    }
+    .services-item .img-box img {
+        height: 105px;
+        width: 120px;
+    }
+    /************ pricing *************/
+    .pricing-item {
+        grid-column: span 6;
+        align-self: center;
+    }
+    .pricing-header .price {
+        height: 130px;
+        width: 130px;
+    }
+    /************ Team *************/
+    .team-item {
+        grid-column: span 6;
+    }
+}
+
+
+/************  Start Section Responsive *************/
+
+@media (max-width:1199px) {
+    .about-img .box-1 {
+        top: 100%;
+        left: 50%;
+    }
+}
+
+@media (max-width:991px) {
+    /************ Variables *************/
+     :root {
+        --fs-4xl: 42px;
+        --fs-3xl: 31px;
+        --fs-2xl: 24px;
+    }
+}
+
+
+/************  End Section Responsive *************/
