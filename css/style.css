@@ -9,6 +9,8 @@
     --satueation: 70%;
     --lightness: 55%;
     --main-color: hsl(var(--hue), var(--satueation), var(--lightness));
+    --main-color-light: hsl(var(--hue) var(--satueation) var(--lightness) / 31%);
+    --gradient-hover-img: to bottom, hsl(var(--hue) var(--satueation) var(--lightness) / 1%) 0, hsl(var(--hue) var(--satueation) var(--lightness) / 25%) 25%, hsl(var(--hue) var(--satueation) var(--lightness) / 75%) 75%, hsl(var(--hue) var(--satueation) var(--lightness) / 95%) 100%;
     /************ Text Colors *************/
     --text-white: hsl(0, 0%, 100%);
     --text-light-gray: hsl(0, 0%, 96%);
@@ -168,18 +170,50 @@ img {
 /************ End Section Grid *************/
 
 
+/************ Start go Down *************/
+
+.go-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    color: var(--main-color);
+    transform: translateX(-50%);
+    font-size: 25px;
+    transition: all .5s ease;
+}
+
+.go-down i {
+    animation: bouncing 5s ease infinite;
+}
+
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40%,
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/************ End go Down *************/
+
+
 /************ Start Section Title *************/
 
 .section-pending {
-    /* padding: 60px 0; */
-}
-
-.about .about-img,
-.about .about-text {
-    grid-column: span 6;
+    padding: 60px 0;
+    position: relative;
 }
 
 .section-title {
+    text-align: center;
     margin-bottom: 45px;
 }
 
@@ -242,6 +276,7 @@ img {
 
 .header.bg-reveal::before {
     transform: translateY(0);
+    backdrop-filter: blur(100px);
 }
 
 .header .container {
@@ -359,6 +394,7 @@ img {
 .home-img {
     position: relative;
     overflow: hidden;
+    animation: up_and_down 5s linear infinite;
 }
 
 .home-img .circle-wrap {
@@ -381,6 +417,16 @@ img {
     display: block;
     margin: auto;
     margin-right: 0;
+}
+
+@keyframes up_and_down {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
 }
 
 .auto-typing {
@@ -419,11 +465,6 @@ img {
     justify-content: flex-start;
 }
 
-
-/* .btn-wrap span {
-    color: var(--main-color);
-} */
-
 .btn-wrap a {
     margin-left: 10px;
     width: 35px;
@@ -449,22 +490,40 @@ img {
 
 /************ Start Section About *************/
 
+.about .about-img {
+    grid-column: span 5;
+}
+
+.about .about-text {
+    grid-column: span 7;
+}
+
 .img-box {
     width: 300px;
-    padding: 10px;
+    padding: 5px;
     background-color: var(--bg-color);
     /* box-shadow: var(--shadow); */
     position: relative;
 }
 
+.img-box img {
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transition: filter .5s ease;
+}
+
+.img-box img:hover {
+    filter: grayscale(80%);
+}
+
 .img-box::before {
     content: "";
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 60%;
+    width: 60%;
     background-color: transparent;
     display: block;
-    border-right: 40px solid var(--main-color);
+    border-right: 40px solid var(--main-color-light);
     border-top: 40px solid var(--main-color);
     right: -23px;
     top: -20px;
@@ -473,5 +532,431 @@ img {
     border-bottom-right-radius: 40px;
 }
 
+.img-box .social-icons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    right: -28px;
+    top: 58%;
+}
+
+.img-box .social-icons a {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    border: 1px solid transparent;
+    transition: all .5s ease;
+    color: var(--bg-white);
+}
+
+.img-box .social-icons a:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.img-box .social-icons a:hover i {
+    transform: scale(1.1);
+}
+
+.about .section-title {
+    text-align: left;
+    margin: 0 0 15px;
+}
+
+
+/* Button Download CV */
+
+.button {
+    position: relative;
+    height: 50px;
+    width: 220px;
+    background: var(--main-color);
+    border-radius: 55px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.button.active-button {
+    height: 15px;
+    width: 300px;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: var(--main-color);
+    border-radius: 55px;
+}
+
+.button.active-button::before {
+    animation: layer 3s ease-in-out forwards;
+}
+
+@keyframes layer {
+    100% {
+        left: 0%;
+    }
+}
+
+.button .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+    transition-delay: .2s;
+}
+
+.button.active-button .content {
+    transform: translateY(60px);
+}
+
+.content i,
+.content .button-text {
+    color: #fff;
+    font-size: 20px;
+}
+
+.content .button-text {
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 8px;
+}
+
 
 /************  End Section About *************/
+
+
+/************  Start Section Skills *************/
+
+.skills .skills_progress,
+.skills .skills_img {
+    grid-column: span 6;
+}
+
+.skills .skills_img {
+    align-self: center;
+}
+
+.skills__subTitle {
+    margin-bottom: 16px;
+}
+
+.skills__text {
+    margin-bottom: 32px;
+    color: var(--text-x-dark-gray);
+}
+
+.skills__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    margin-bottom: 32px;
+    border-radius: .5rem;
+    background: var(--bg-body);
+    box-shadow: 0 4px 25px rgba(12, 36, 49, .15);
+}
+
+.skills__icon {
+    font-size: 2rem;
+    margin-right: 16px;
+    color: var(--main-color);
+}
+
+.skills__names {
+    display: flex;
+    align-items: center;
+    color: var(--text-dark-gray)
+}
+
+.skills__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-color);
+    height: 0.25rem;
+    border-radius: .5rem;
+    z-index: -10;
+}
+
+.skills__percentage {
+    color: var(--text-dark-gray);
+}
+
+.skills__subTitle {
+    color: var(--text-dark-gray);
+}
+
+.skills__html {
+    width: 95%;
+}
+
+.skills__css {
+    width: 85%;
+}
+
+.skills__js {
+    width: 60%;
+}
+
+.skills__php {
+    width: 90%;
+}
+
+.skills__java {
+    width: 50%;
+}
+
+.skills__py {
+    width: 50%;
+}
+
+.skills__sql {
+    width: 80%;
+}
+
+.skills__data.last p {
+    width: 100%;
+    letter-spacing: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 7px;
+}
+
+.skills__img {
+    border-radius: .5rem;
+}
+
+
+/************  End Section Skills *************/
+
+
+/************  Start Section Services *************/
+
+.serv-boxes {
+    grid-column: span 4;
+}
+
+.services .serviceBox {
+    position: relative;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    width: 350px;
+    height: 280px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+.serviceBox .serv-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color-light);
+    transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition-delay: .25s;
+    border-radius: 20px;
+}
+
+.serviceBox:hover .serv-icon {
+    top: 30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50% 50% 47% 53% / 34% 34% 66% 66%;
+    transition-delay: 0s;
+}
+
+.serviceBox .serv-icon i {
+    font-size: 5em;
+    color: var(--main-color);
+    transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition-delay: 0.25s;
+}
+
+.serviceBox:hover .serv-icon i {
+    font-size: 2em;
+    transition-delay: 0s;
+}
+
+.serviceBox .serv-content {
+    position: relative;
+    padding: 120px 20px 20px 20px;
+    color: var(--main-color);
+    text-align: center;
+    z-index: 1;
+    transform: scale(0);
+    transition: all .5s;
+    transition-delay: 0s;
+}
+
+.serviceBox:hover .serv-content {
+    transform: scale(1);
+    transition-delay: .25s;
+}
+
+.serviceBox .serv-content h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.serviceBox .serv-content p {
+    font-weight: 300;
+    line-height: 1.5em;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+
+/************  End Section Services *************/
+
+
+/************  Start Section Projects *************/
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border: 1px solid var(--focus-shadow);
+}
+
+.projects-filter li {
+    margin: 10px;
+    padding: 5px 20px;
+    color: var(--main-color);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    user-select: none;
+}
+
+.projects-filter li.projects-filter-active {
+    background-color: var(--main-color-light);
+    border-radius: 20px;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project .itemBox {
+    width: 550px;
+    grid-column: span 6;
+    border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow);
+}
+
+.project .itemBox.hide {
+    transition: all .5s ease;
+    display: none;
+}
+
+.project .itemBox img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.work__img {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.work__img.app-mobile {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text,
+.work__img:after {
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.work__img:after {
+    content: "";
+    height: 100%;
+    bottom: 0;
+    transition: .5s;
+}
+
+.work__img:hover:after {
+    background: linear-gradient(var(--gradient-hover-img));
+}
+
+.img-text {
+    padding: 20px;
+    margin-bottom: 20px;
+    bottom: 0;
+    z-index: 1;
+    transform: translateY(160px);
+    transition: all .5s cubic-bezier(0.13, .62, 0.81, .91) 0s;
+}
+
+.img-text h3 {
+    color: var(--text-white);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.img-text small {
+    color: var(--text-white);
+    font-size: 18px;
+}
+
+.work__img:hover .img-text {
+    transform: translateY(20px);
+}
+
+.work__img img {
+    transition: 1s;
+    cursor: pointer;
+    height: 100%;
+}
+
+.work__img img:hover {
+    transform: scale(1.1);
+}
+
+
+/************  End Section Projects *************/
