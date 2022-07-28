@@ -10,7 +10,8 @@
     --lightness: 55%;
     --main-color: hsl(var(--hue), var(--satueation), var(--lightness));
     --main-color-light: hsl(var(--hue) var(--satueation) var(--lightness) / 31%);
-    --gradient-hover-img: to bottom, hsl(var(--hue) var(--satueation) var(--lightness) / 1%) 0, hsl(var(--hue) var(--satueation) var(--lightness) / 25%) 25%, hsl(var(--hue) var(--satueation) var(--lightness) / 75%) 75%, hsl(var(--hue) var(--satueation) var(--lightness) / 95%) 100%;
+    --main-color-x-light: hsl(var(--hue) var(--satueation) var(--lightness) / 12%);
+    --gradient-hover-img: to bottom, hsl(var(--hue) var(--satueation) var(--lightness) / 1%) 0, hsl(var(--hue) var(--satueation) var(--lightness) / 25%) 25%, hsl(var(--hue) var(--satueation) var(--lightness) / 80%) 75%, hsl(var(--hue) var(--satueation) var(--lightness) / 100%) 100%;
     /************ Text Colors *************/
     --text-white: hsl(0, 0%, 100%);
     --text-light-gray: hsl(0, 0%, 96%);
@@ -285,7 +286,8 @@ img {
     justify-content: space-between;
 }
 
-.header .logo a {
+.header .logo a,
+.footer .logo a {
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
@@ -295,7 +297,8 @@ img {
     letter-spacing: 2px;
 }
 
-.header .logo span {
+.header .logo span,
+.footer .logo span {
     font-size: 12px;
     font-weight: 400;
     color: var(--text-x-dark-gray);
@@ -304,7 +307,8 @@ img {
     position: relative;
 }
 
-.header .logo span::before {
+.header .logo span::before,
+.footer .logo span::before {
     content: "";
     position: absolute;
     background: transparent;
@@ -779,7 +783,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 1;
     transition-delay: .25s;
     border-radius: 20px;
 }
@@ -841,6 +845,12 @@ img {
 
 /************  Start Section Projects *************/
 
+.d-grid.pro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .projects-filter {
     display: flex;
     justify-content: center;
@@ -875,8 +885,8 @@ img {
 }
 
 .project .itemBox {
-    width: 550px;
-    grid-column: span 6;
+    max-width: 100%;
+    /* grid-column: span 4; */
     border-radius: 20px;
     background: var(--bg-color);
     box-shadow: var(--shadow);
@@ -898,12 +908,6 @@ img {
     overflow: hidden;
     text-align: center;
     position: relative;
-}
-
-.work__img.app-mobile {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .img-text,
@@ -935,13 +939,13 @@ img {
 
 .img-text h3 {
     color: var(--text-white);
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
 .img-text small {
     color: var(--text-white);
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .work__img:hover .img-text {
@@ -958,5 +962,551 @@ img {
     transform: scale(1.1);
 }
 
+.itemBox.work__img.mobile-app {
+    height: 183px;
+    width: 100%;
+    background-image: url('../imgs/app-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top -67px right;
+}
+
 
 /************  End Section Projects *************/
+
+
+/************  Start Section Contact *************/
+
+.contact__container .contact__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__content .left-side {
+    width: 25%;
+    height: 100%;
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact__content .left-side::before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+}
+
+.left-side .details {
+    margin: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-side .details i {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color-x-light);
+    font-size: 30px;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 51% 49% 49% 51% / 37% 36% 64% 63%;
+}
+
+.left-side .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-x-dark-gray);
+}
+
+.left-side .details .text-one,
+.left-side .details .text-two {
+    font-size: 14px;
+    color: var(--text-dark-gray);
+}
+
+.contact__content .right-side {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.right-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--text-x-dark-gray);
+}
+
+.right-side p {
+    /* text-align: center; */
+    margin: 10px 0px 10px 0px;
+    color: var(--text-dark-gray);
+}
+
+@media (max-width:820px) {
+    .contact__container .contact__content {
+        flex-direction: column-reverse;
+    }
+    .contact__content .left-side {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+    .contact__content .left-side::before {
+        display: none;
+    }
+    .contact__content .right-side {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.inputBox {
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.inputBox .contact__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main-color-light);
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    font-size: 1em;
+    color: var(--text-dark-gray);
+}
+
+.inputBox .spn-floating {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--text-x-dark-gray);
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.inputBox .contact__input:valid,
+.inputBox .contact__input:focus {
+    border-color: var(--main-color);
+}
+
+.inputBox .contact__input:valid~span,
+.inputBox .contact__input:focus~span {
+    transform: translateY(-7px) translateX(10px);
+    font-size: .65em;
+    padding: 0 10px;
+    color: var(--text-white);
+    background: var(--main-color);
+    border-radius: 2px;
+    letter-spacing: .2em;
+}
+
+textarea.contact__input {
+    resize: none;
+    height: 150px;
+}
+
+.inputBox i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.inputBox small {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+.contact__button {
+    display: block;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.inputBox .characters {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    color: var(--main-color);
+    display: none;
+}
+
+.inputBox.active-l .characters {
+    display: block;
+}
+
+.inputBox.error .characters {
+    color: red;
+}
+
+.inputBox.error textarea.contact__input {
+    border-color: red;
+}
+
+.inputBox.error .contact__input:valid~span,
+.inputBox.error .contact__input:focus~span {
+    background-color: red;
+}
+
+.text {
+    position: relative;
+}
+
+.text.first-text {
+    color: #fff;
+}
+
+.text.sec-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--degree-dark);
+    border-left: 2px solid var(--first-color);
+    animation: animate 4s steps(8) infinite;
+}
+
+@keyframes animate {
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.inputBox.vfexx .contact__input:valid~span,
+.inputBox.vfexx .contact__input:focus~span {
+    background-color: red;
+}
+
+.inputBox.vfexx .contact__input:valid~span~i,
+.inputBox.vfexx .contact__input:focus~span~i {
+    color: red;
+}
+
+.inputBox.vfsxx .contact__input:valid,
+.inputBox.vfsxx .contact__input:focus {
+    border: 1px solid #48ff00;
+}
+
+.inputBox.vfexx .contact__input:valid,
+.inputBox.vfexx .contact__input:focus {
+    border: 1px solid red;
+}
+
+.inputBox.vfsxx .contact__input:valid~span,
+.inputBox.vfsxx .contact__input:focus~span {
+    background-color: #48ff00;
+}
+
+.inputBox.vfsxx .contact__input:valid~span~i.vfsixx,
+.inputBox.vfsxx .contact__input:focus~span~i.vfsixx {
+    color: #48ff00;
+    visibility: visible;
+}
+
+.inputBox.vfexx .contact__input:valid~span~i.vfeixx,
+.inputBox.vfexx .contact__input:focus~span~i.vfeixx {
+    color: red;
+    visibility: visible;
+}
+
+.inputBox.vfexx small {
+    display: block;
+}
+
+.inputBox.vfexx .characters {
+    bottom: 17px;
+}
+
+.button_c {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: var(--text-x-dark-gray);
+    background-color: var(--main-color-light);
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.button_c:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.button_c span {
+    display: block;
+    position: absolute;
+    background: var(--main-color);
+}
+
+.button_c span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .5s;
+}
+
+.button_c:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform .5s;
+}
+
+.button_c span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.button_c:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.button_c span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .5s;
+    transition-delay: .3s;
+}
+
+.button_c:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform .5s;
+    transition-delay: .3s;
+}
+
+.button_c span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+    transition-delay: .3s;
+}
+
+.button_c:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .5s;
+    transition-delay: .3s;
+}
+
+.button_c i {
+    transition: .4s;
+    /* transition-delay: .4s; */
+}
+
+.button_c:hover i {
+    transform: translateX(70%);
+}
+
+
+/************  End Section Contact *************/
+
+
+/************  Start Section Footer *************/
+
+.footer {
+    margin-top: 40px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    text-align: center;
+    font-weight: 500;
+    padding: 2rem 0;
+}
+
+.footer .logo.footer__title a {
+    color: var(--text-white);
+}
+
+.header .logo span,
+.footer .logo span {
+    color: var(--text-light-gray);
+}
+
+.header .logo span::before,
+.footer .logo span::before {
+    border-top-color: var(--text-light-gray);
+}
+
+.footer__title {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.footer__social {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    background-color: var(--main-color-x-light);
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 20px;
+    color: var(--text-white);
+    z-index: 1000;
+    border: 1px solid var(--body-bg-color);
+}
+
+.footer__social a::before,
+.footer__social a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -2;
+    filter: blur(5px);
+    transition: all .5s ease;
+}
+
+.footer__social a::before {
+    bottom: 50%;
+    left: 50%;
+}
+
+.footer__social a::after {
+    top: 50%;
+    right: 50%;
+}
+
+.footer__social a.facebook::before {
+    background-color: dodgerblue;
+    box-shadow: 1px 1px 60px #1773ea;
+}
+
+.footer__social a.facebook::after {
+    background-color: #085fcf;
+    box-shadow: 1px 1px 60px #085fcf;
+}
+
+.footer__social a.insta::before {
+    background: linear-gradient(200deg, #5554cc, #f4c969, #d92a74);
+    box-shadow: 1px 1px 60px #e141b1;
+}
+
+.footer__social a.insta::after {
+    background: linear-gradient(-260deg, #d92a74, #f4c969, #5554cc);
+    box-shadow: 1px 1px 60px #ff00b3;
+}
+
+.footer__social a.linkedin::before {
+    background-color: #0a66c2;
+    box-shadow: 1px 1px 60px #0a66c2;
+}
+
+.footer__social a.linkedin::after {
+    background-color: #095bad;
+    box-shadow: 1px 1px 60px #0a57a5;
+}
+
+.footer__social a.github::before {
+    background-color: rgb(54, 54, 54);
+    box-shadow: 1px 1px 60px rgb(54, 54, 54);
+}
+
+.footer__social a.github::after {
+    background-color: rgb(5, 5, 5);
+    box-shadow: 1px 1px 60px rgb(5, 5, 5);
+}
+
+.footer__social a:hover:before {
+    animation: slide1 .5s linear forwards;
+}
+
+.footer__social a:hover:after {
+    animation: slide2 .5s linear forwards;
+}
+
+@keyframes slide1 {
+    100% {
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+    }
+}
+
+@keyframes slide2 {
+    100% {
+        top: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+
+.footer__social a i {
+    transition: transform .4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.footer__social a:hover i {
+    transform: scale(1.2);
+}
+
+
+/************  End Section Footer *************/
