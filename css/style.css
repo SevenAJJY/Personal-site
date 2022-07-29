@@ -192,6 +192,50 @@ img {
 /************ End go Down *************/
 
 
+/************ Start Preloader  *************/
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-body);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    transition: opacity .6s ease;
+}
+
+.preloader div {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-left: 4px solid var(--main-color);
+    border-right: 4px solid var(--main-color);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    animation: preloader 2s linear infinite;
+}
+
+@keyframes preloader {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/************ End Preloader *************/
+
+
 /************ Start Section Title *************/
 
 .section-pending {
@@ -287,7 +331,7 @@ img {
 .footer .logo span {
     font-size: 12px;
     font-weight: 400;
-    color: var(--text-x-dark-gray);
+    color: var(--text-dark-gray);
     letter-spacing: 1px;
     text-align: center;
     position: relative;
@@ -301,7 +345,7 @@ img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border-top: 2px solid var(--main-color);
+    border-top: 2px solid var(--text-dark-gray);
     border-right: 2px solid transparent;
     border-left: 0px solid transparent;
 }
@@ -1369,12 +1413,10 @@ textarea.contact__input {
     color: var(--text-white);
 }
 
-.header .logo span,
 .footer .logo span {
     color: var(--text-light-gray);
 }
 
-.header .logo span::before,
 .footer .logo span::before {
     border-top-color: var(--text-light-gray);
 }
@@ -1610,7 +1652,7 @@ textarea.contact__input {
         background-color: var(--bg-color);
         padding: 60px 30px 30px;
         overflow-y: auto;
-        transform: translateX(100%);
+        transform: translateX(70%);
         transition: all .3s ease;
     }
     .nav.open {
@@ -1626,6 +1668,30 @@ textarea.contact__input {
     }
     .nav li+li {
         border-top: 1px solid var(--border-color);
+    }
+    .nav li {
+        display: flex;
+        justify-content: center;
+    }
+    .nav a::before {
+        content: "";
+        position: absolute;
+        background-color: var(--main-color);
+        bottom: 5px;
+        left: 0;
+        width: 0px;
+        height: 5px;
+        transform: translateX(-50%);
+        transition: all .3s ease;
+        opacity: 0;
+    }
+    .nav a:hover::before {
+        opacity: 1;
+        left: 50%;
+        width: 5px;
+        border-radius: 10px;
+        transform: translateX(-50%);
+        color: var(--main-color);
     }
     /************ Home *************/
     .home-text,

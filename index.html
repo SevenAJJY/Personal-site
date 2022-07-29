@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
     <link rel="stylesheet" href="./css/style-switcher.css" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+
+    <!-- Preloader Start -->
+    <div class="preloader js-preloader">
+        <div></div>
+    </div>
+    <!-- Preloader End -->
 
     <!---------- Start Wrapper --------->
     <div class="wrapper">
@@ -18,13 +25,13 @@
         <!---------- Start Header Section --------->
         <header class="header header-js">
             <div class="container">
-                <div class="logo">
+                <div class="logo" data-aos="fade-down" data-aos-duration="1000">
                     <a href="#">Seven<span>AJJY</span></a>
                 </div>
-                <button type="button" class="nav-toggler js-nav-toggler">
+                <button type="button" class="nav-toggler js-nav-toggler" data-aos="fade-down" data-aos-duration="1000">
                     <span></span>
                 </button>
-                <nav class="nav js-nav">
+                <nav class="nav js-nav" data-aos="fade-down" data-aos-duration="1000">
                     <ul>
                         <li>
                             <a href="#home">Home</a>
@@ -67,9 +74,9 @@
                         </div>
                     </div>
                     <div class="home-img">
-                        <!-- <div class="circle-wrap" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="circle-wrap" data-aos="fade-right" data-aos-duration="1000">
                             <div class="circle"></div>
-                        </div> -->
+                        </div>
                         <img src="./imgs/home.svg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
                     </div>
                 </div>
@@ -86,24 +93,24 @@
             <div class="container">
                 <div class="d-grid">
                     <div class="about-img">
-                        <div class="img-box">
+                        <div class="img-box" data-aos="zoom-in" data-aos-duration="1000">
                             <div class="social-icons">
-                                <a title="facebook" href="https://www.facebook.com/elhajjy.yassine"><i class="fa-brands fa-facebook-square"></i></a>
-                                <a title="instagram" href="https://www.instagram.com/yassine_elhajjy/"><i class="fa-brands fa-instagram"></i></a>
-                                <a title="linkedin" href="https://www.linkedin.com/in/yassine-elhajjy-bab1ba233/"><i class="fa-brands fa-linkedin"></i></a>
-                                <a title="github" href="https://github.com/SevenAJJY"><i class="fa-brands fa-github"></i></a>
+                                <a data-aos="fade-up" data-aos-duration="600" title="facebook" href="https://www.facebook.com/elhajjy.yassine"><i class="fa-brands fa-facebook-square"></i></a>
+                                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="150" title="instagram" href="https://www.instagram.com/yassine_elhajjy/"><i class="fa-brands fa-instagram"></i></a>
+                                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" title="linkedin" href="https://www.linkedin.com/in/yassine-elhajjy-bab1ba233/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="350" title="github" href="https://github.com/SevenAJJY"><i class="fa-brands fa-github"></i></a>
                             </div>
                             <img src="./imgs/sevenajjy.jpeg" alt="My Image" />
                         </div>
                     </div>
                     <div class="about-text">
                         <div class="section-title">
-                            <span class="title">About Me</span>
-                            <h1 class="sub-title">Who I am</h1>
+                            <span class="title" data-aos="fade-up" data-aos-duration="600">About Me</span>
+                            <h1 class="sub-title" data-aos="fade-up" data-aos-duration="600">Who I am</h1>
                         </div>
-                        <p>Web developer and designer, I love the field of informatics and in the future I seek to develop the web.</p>
-                        <p> I am a very strict and motivated person who loves to face challenges and difficulties and discover new technologies in the world of programming.</p>
-                        <div class="button btn">
+                        <p data-aos="fade-up" data-aos-duration="600">Web developer and designer, I love the field of informatics and in the future I seek to develop the web.</p>
+                        <p data-aos="fade-up" data-aos-duration="600"> I am a very strict and motivated person who loves to face challenges and difficulties and discover new technologies in the world of programming.</p>
+                        <div class="button btn" data-aos="fade-up" data-aos-duration="600">
                             <div class="content">
                                 <i class="fa-solid i-change fa-cloud-arrow-down"></i>
                                 <a href="./assets/my_cv.pdf" download="./assets/my_cv.pdf" class="button-text">Download Cv</a>
@@ -120,13 +127,13 @@
         <section class="skills section-pending" id="skills">
             <div class="container">
                 <div class="section-title">
-                    <span class="title">skills</span>
-                    <h2 class="sub-title">My Skills</h2>
+                    <span class="title" data-aos="fade-up" data-aos-duration="600">skills</span>
+                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">My Skills</h2>
                 </div>
                 <div class="d-grid">
                     <div class="skills_progress">
-                        <h2 class="skills__subTitle">Profesional Skills</h2>
-                        <div class="skills__data">
+                        <h2 class="skills__subTitle" data-aos="fade-up" data-aos-duration="600">Profesional Skills</h2>
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-brands fa-html5 skills__icon"></i>
                                 <span class="skills__name">HTML5</span>
@@ -136,7 +143,7 @@
                             </div>
                             <div class="skills__bar skills__html"></div>
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-brands fa-css3-alt skills__icon"></i>
                                 <span class="skills__name">CSS3</span>
@@ -146,7 +153,7 @@
                             </div>
                             <div class="skills__bar skills__css"></div>
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-brands fa-js skills__icon"></i>
                                 <span class="skills__name">JAVASCRIPT</span>
@@ -156,7 +163,7 @@
                             </div>
                             <div class="skills__bar skills__js"></div>
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-brands fa-php skills__icon"></i>
                                 <span class="skills__name">PHP</span>
@@ -166,7 +173,7 @@
                             </div>
                             <div class="skills__bar skills__php"></div>
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-brands fa-java skills__icon"></i>
                                 <span class="skills__name">Java</span>
@@ -176,7 +183,7 @@
                             </div>
                             <div class="skills__bar skills__java"></div>
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-solid fa-database skills__icon"></i>
                                 <span class="skills__name">MySQL/SQL Server</span>
@@ -186,7 +193,7 @@
                             </div>
                             <div class="skills__bar skills__sql"></div>
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
                             <div class="skills__names">
                                 <i class="fa-brands fa-python skills__icon"></i>
                                 <span class="skills__name">Python</span>
@@ -200,7 +207,7 @@
                             <p>. . .</p>
                         </div>
                     </div>
-                    <div class="skills_img">
+                    <div class="skills_img" data-aos="zoom-in" data-aos-duration="1000">
                         <img src="./imgs/skills.svg " class="skills__img " alt=" ">
                     </div>
                 </div>
@@ -212,11 +219,11 @@
         <section class="services section-pending" id="services">
             <div class="container">
                 <div class="section-title">
-                    <span class="title">Services</span>
-                    <h2 class="sub-title">What i do</h2>
+                    <span class="title" data-aos="fade-up" data-aos-duration="600">Services</span>
+                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">What i do</h2>
                 </div>
                 <div class="grid">
-                    <div class="serv-boxes">
+                    <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600">
                         <div class="serviceBox">
                             <div class="serv-icon">
                                 <i class="fa-solid fa-pen-ruler"></i>
@@ -227,7 +234,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="serv-boxes">
+                    <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
                         <div class="serviceBox">
                             <div class="serv-icon">
                                 <i class="fa-solid fa-code"></i>
@@ -238,7 +245,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="serv-boxes">
+                    <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                         <div class="serviceBox">
                             <div class="serv-icon">
                                 <i class="fa-solid fa-mobile-screen-button"></i>
@@ -259,81 +266,81 @@
         <section class="projects section-pending" id="projects">
             <div class="container">
                 <div class="section-title">
-                    <span class="title">Projectss</span>
-                    <h2 class="sub-title">My Projects</h2>
+                    <span class="title" data-aos="fade-up" data-aos-duration="600">Projectss</span>
+                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">My Projects</h2>
                 </div>
                 <ul class="projects-filter">
-                    <li class="list projects-filter-active" data-filter="all">All</li>
-                    <li class="list" data-filter="mobile-app">Mobile Application</li>
-                    <li class="list" data-filter="web-app">Web application</li>
-                    <li class="list" data-filter="design-app">Web Design</li>
+                    <li class="list projects-filter-active" data-filter="all" data-aos="fade-up" data-aos-duration="600">All</li>
+                    <li class="list" data-filter="mobile-app" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">Mobile Application</li>
+                    <li class="list" data-filter="web-app" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Web application</li>
+                    <li class="list" data-filter="design-app" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">Web Design</li>
                 </ul>
                 <div class="project">
                     <div class="d-grid pro-grid">
-                        <div class="itemBox work__img" data-item="web-app">
+                        <div class="itemBox work__img" data-item="web-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/eCommerce.PNG" alt="">
                             <div class="img-text">
                                 <h3>eCommerce Shop</h3>
                                 <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="web-app">
+                        <div class="itemBox work__img" data-item="web-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/gestionCommande.PNG" alt="">
                             <div class="img-text">
                                 <h3>gestion de commande</h3>
                                 <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="design-app">
+                        <div class="itemBox work__img" data-item="design-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/nadafa.PNG" alt="">
                             <div class="img-text">
                                 <h3>Nadafa Services</h3>
                                 <small>HTML-CSS-JavaScript</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="web-app">
+                        <div class="itemBox work__img" data-item="web-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/radop.PNG" alt="">
                             <div class="img-text">
                                 <h3>gestion de paiement</h3>
                                 <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="design-app">
+                        <div class="itemBox work__img" data-item="design-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/port.PNG" alt="">
                             <div class="img-text">
                                 <h3>Portfolio</h3>
                                 <small>HTML-CSS-JavaScript</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="web-app">
+                        <div class="itemBox work__img" data-item="web-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/eStore.PNG" alt="">
                             <div class="img-text">
                                 <h3>e-store</h3>
                                 <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="design-app">
+                        <div class="itemBox work__img" data-item="design-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/shoasApp.PNG" alt="">
                             <div class="img-text">
                                 <h3>Shoas App</h3>
                                 <small>HTML-CSS-JavaScript</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="design-app">
+                        <div class="itemBox work__img" data-item="design-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/leani.PNG" alt="">
                             <div class="img-text ">
                                 <h3>Portfolio</h3>
                                 <small>HTML-CSS</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img" data-item="design-app">
+                        <div class="itemBox work__img" data-item="design-app" data-aos="fade-up" data-aos-duration="600">
                             <img src="./imgs/port2.PNG" alt="">
                             <div class="img-text ">
                                 <h3>Portfolio</h3>
                                 <small>HTML-CSS</small>
                             </div>
                         </div>
-                        <div class="itemBox work__img mobile-app" data-item="mobile-app">
+                        <div class="itemBox work__img mobile-app" data-item="mobile-app" data-aos="fade-up" data-aos-duration="600">
                             <!-- <img src="./imgs/app-mobile.png" alt=""> -->
                             <div class="img-text ">
                                 <h3>gestion d'employé </h3>
@@ -351,25 +358,25 @@
         <section class="contact section-pendding" id="contact">
             <div class="container">
                 <div class="section-title">
-                    <span class="title">Contact</span>
-                    <h2 class="sub-title">Contact With Me</h2>
+                    <span class="title" data-aos="fade-up" data-aos-duration="600">Contact</span>
+                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">Contact With Me</h2>
                 </div>
                 <div class="contact__container bd-grid">
                     <div class="contact__content">
                         <div class="left-side">
-                            <div class="address details">
+                            <div class="address details" data-aos="fade-up" data-aos-duration="600">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <div class="topic">Address</div>
                                 <div class="text-one">Marroco</div>
                                 <div class="text-two">Settat, Kamal 2</div>
                             </div>
-                            <div class="phone details">
+                            <div class="phone details" data-aos="fade-up" data-aos-duration="600">
                                 <i class="fa-solid fa-phone"></i>
                                 <div class="topic">Phone</div>
                                 <div class="text-one">Number</div>
                                 <div class="text-two">+212709239818</div>
                             </div>
-                            <div class="email details">
+                            <div class="email details" data-aos="fade-up" data-aos-duration="600">
                                 <i class="fa-solid fa-envelope"></i>
                                 <div class="topic">Email</div>
                                 <div class="text-one">yassine.elhajjy@gmail.com</div>
@@ -377,31 +384,31 @@
                             </div>
                         </div>
                         <div class="right-side">
-                            <div class="topic-text">Send us a message</div>
-                            <p>If to here any work from me or any types of queries , you can send me a message from here . It's my pleasure to help you.</p>
+                            <div class="topic-text" data-aos="fade-up" data-aos-duration="600">Send us a message</div>
+                            <p data-aos="fade-up" data-aos-duration="600">If to here any work from me or any types of queries , you can send me a message from here . It's my pleasure to help you.</p>
                             <form action="" id="form" class="contact__form">
-                                <div class="inputBox">
+                                <div class="inputBox" data-aos="fade-up" data-aos-duration="600">
                                     <input type="text" id="fullname" class="contact__input" required>
                                     <span class="spn-floating">Full name</span>
                                     <i class="fa-solid fa-circle-check vfsixx"></i>
                                     <i class="fa-solid fa-circle-exclamation vfeixx"></i>
                                     <small>error message</small>
                                 </div>
-                                <div class="inputBox">
+                                <div class="inputBox" data-aos="fade-up" data-aos-duration="600">
                                     <input type="email" id="email" class="contact__input" required>
                                     <span class="spn-floating">Email</span>
                                     <i class="fa-solid fa-circle-check vfsixx"></i>
                                     <i class="fa-solid fa-circle-exclamation vfeixx"></i>
                                     <small>error message</small>
                                 </div>
-                                <div class="inputBox">
+                                <div class="inputBox" data-aos="fade-up" data-aos-duration="600">
                                     <input type="text" id="subject" class="contact__input" required>
                                     <span class="spn-floating">Subject</span>
                                     <i class="fa-solid fa-circle-check vfsixx"></i>
                                     <i class="fa-solid fa-circle-exclamation vfeixx"></i>
                                     <small>error message</small>
                                 </div>
-                                <div class="inputBox message">
+                                <div class="inputBox message" data-aos="fade-up" data-aos-duration="600">
                                     <textarea name="" id="umessage" cols="30" rows="10" class="contact__input input-ms " required></textarea>
                                     <span class="spn-floating">Write your message here</span>
                                     <div class="characters">
@@ -413,7 +420,7 @@
                                     <small>error message</small>
                                 </div>
 
-                                <button type="submit" class="contact__button button_c">
+                                <button type="submit" class="contact__button button_c" data-aos="fade-up" data-aos-duration="600">
                                     Send Now
                                     <span></span>
                                     <span></span>
@@ -483,6 +490,7 @@
 
 
 
+    <script src="./js/aos.js "></script>
     <script src="./js/style-switcher.js "></script>
     <script src="./js/main.js "></script>
 </body>
