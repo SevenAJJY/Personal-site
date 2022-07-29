@@ -359,7 +359,7 @@ img {
 /************ Start Section Home *************/
 
 .home {
-    /* padding: 100px 0 60px; */
+    padding: 100px 0 60px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -514,8 +514,8 @@ img {
     width: 60%;
     background-color: transparent;
     display: block;
-    border-right: 40px solid var(--main-color-light);
-    border-top: 40px solid var(--main-color);
+    border-right: 45px solid var(--main-color-light);
+    border-top: 45px solid var(--main-color);
     right: -23px;
     top: -20px;
     z-index: -1;
@@ -529,7 +529,7 @@ img {
     align-items: center;
     flex-direction: column;
     gap: 5px;
-    right: -28px;
+    right: -30px;
     top: 58%;
 }
 
@@ -663,8 +663,9 @@ img {
     padding: .5rem 1rem;
     margin-bottom: 32px;
     border-radius: .5rem;
-    background: var(--bg-body);
+    background: var(--bg-color);
     box-shadow: 0 4px 25px rgba(12, 36, 49, .15);
+    z-index: 1;
 }
 
 .skills__icon {
@@ -686,7 +687,7 @@ img {
     background-color: var(--main-color);
     height: 0.25rem;
     border-radius: .5rem;
-    z-index: -10;
+    z-index: -11;
 }
 
 .skills__percentage {
@@ -746,14 +747,22 @@ img {
 /************  Start Section Services *************/
 
 .serv-boxes {
-    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .services .serviceBox {
     position: relative;
     background-color: var(--bg-color);
     border-radius: 20px;
-    width: 350px;
+    max-width: 350px;
     height: 280px;
     box-shadow: var(--shadow);
     border-radius: 20px;
@@ -813,6 +822,7 @@ img {
 }
 
 .serviceBox .serv-content h2 {
+    font-size: var(--fs-2xl);
     margin-top: 10px;
     margin-bottom: 5px;
     text-transform: capitalize;
@@ -1495,6 +1505,10 @@ textarea.contact__input {
     transform: scale(1.2);
 }
 
+.footer span {
+    font-size: var(--fs-sm);
+}
+
 
 /************  End Section Footer *************/
 
@@ -1517,54 +1531,165 @@ textarea.contact__input {
     }
     /************ Home *************/
     .home-img img {
-        max-width: 250px;
+        max-width: 320px;
     }
     .home-img .circle-wrap .circle {
         height: 250px;
         width: 250px;
     }
+    /************ About *************/
+    .about .about-img,
+    .about .about-text {
+        grid-column: span 6;
+    }
     /************ Services *************/
-    .services-item .img-box {
-        height: 120px;
-        width: 120px;
-    }
-    .services-item .img-box img {
-        height: 105px;
-        width: 120px;
-    }
-    /************ pricing *************/
-    .pricing-item {
-        grid-column: span 6;
-        align-self: center;
-    }
-    .pricing-header .price {
-        height: 130px;
-        width: 130px;
-    }
-    /************ Team *************/
-    .team-item {
-        grid-column: span 6;
+    .serviceBox .serv-content h2 {
+        font-size: var(--fs-1xl);
     }
 }
 
-
-/************  Start Section Responsive *************/
-
-@media (max-width:1199px) {
-    .about-img .box-1 {
-        top: 100%;
-        left: 50%;
-    }
-}
-
-@media (max-width:991px) {
+@media (max-width:767px) {
     /************ Variables *************/
      :root {
-        --fs-4xl: 42px;
-        --fs-3xl: 31px;
-        --fs-2xl: 24px;
+        --fs-4xl: 35px;
+        --fs-3xl: 26px;
+        --fs-2xl: 22px;
+        --fs-1xl: 18px;
+    }
+    /************ Header *************/
+    .nav-toggler {
+        display: block;
+        height: 34px;
+        width: 40px;
+        border: none;
+        z-index: 1;
+        background: transparent;
+        cursor: pointer;
+    }
+    .nav-toggler span {
+        display: block;
+        height: 2px;
+        width: 24px;
+        background: var(--main-color);
+        margin: auto;
+        position: relative;
+        transition: background .3s ease;
+    }
+    .nav-toggler.active span {
+        background-color: transparent;
+    }
+    .nav-toggler span:before,
+    .nav-toggler span:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        transition: transform .3s ease;
+    }
+    .nav-toggler span:before {
+        transform: translateY(-7px);
+    }
+    .nav-toggler.active span:before {
+        transform: rotate(45deg);
+    }
+    .nav-toggler span:after {
+        transform: translateY(7px);
+    }
+    .nav-toggler.active span:after {
+        transform: rotate(-45deg);
+    }
+    .nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        background-color: var(--bg-color);
+        padding: 60px 30px 30px;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: all .3s ease;
+    }
+    .nav.open {
+        transform: translateX(0);
+        box-shadow: var(--shadow);
+    }
+    .nav li {
+        display: block;
+        margin: 0;
+    }
+    .nav a {
+        font-size: var(--fs-1xl);
+    }
+    .nav li+li {
+        border-top: 1px solid var(--border-color);
+    }
+    /************ Home *************/
+    .home-text,
+    .home-img {
+        grid-column: span 12;
+    }
+    .home-img {
+        order: -1;
+        margin: 20px 0;
+    }
+    .home-img img {
+        margin: auto;
+    }
+    /************ About *************/
+    .about .about-img,
+    .about .about-text {
+        grid-column: span 12;
+    }
+    .about .about-img {
+        justify-self: center;
+    }
+    .about .about-text {
+        order: -1;
+        margin-bottom: 20px;
+    }
+    .about .section-title {
+        text-align: center;
+    }
+    /************ Skills *************/
+    .skills .skills_progress,
+    .skills .skills_img {
+        grid-column: span 12;
+    }
+    .skills .skills_img {
+        order: -1;
     }
 }
 
-
-/************  End Section Responsive *************/
+@media (max-width:575px) {
+    /************ Grid *************/
+    .d-grid {
+        gap: 20px;
+    }
+    /************ Home *************/
+    .home-img img {
+        max-width: 220px;
+    }
+    .home-text h1 {
+        font-size: var(--fs-3xl);
+    }
+    /************ About *************/
+    .img-box {
+        width: 250px;
+    }
+    .img-box img {
+        border-radius: 40px;
+    }
+    .img-box::before {
+        display: none;
+    }
+    .img-box .social-icons {
+        flex-direction: row;
+        right: 50%;
+        bottom: 0;
+        transform: translate(50%, 85px);
+    }
+}
