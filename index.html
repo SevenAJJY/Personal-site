@@ -31,25 +31,25 @@
                 <button type="button" class="nav-toggler js-nav-toggler" data-aos="fade-down" data-aos-duration="1000">
                     <span></span>
                 </button>
-                <nav class="nav js-nav" data-aos="fade-down" data-aos-duration="1000">
-                    <ul>
+                <nav class="nav js-nav">
+                    <ul data-aos="fade-down" data-aos-duration="1000">
                         <li>
-                            <a href="#home">Home</a>
+                            <a class="nav__link active" href="#home">Home</a>
                         </li>
                         <li>
-                            <a href="#about">About</a>
+                            <a class="nav__link" href="#about">About</a>
                         </li>
                         <li>
-                            <a href="#skills">Skilles</a>
+                            <a class="nav__link" href="#skills">Skilles</a>
                         </li>
                         <li>
-                            <a href="#projects">Services</a>
+                            <a class="nav__link" href="#services">Services</a>
                         </li>
                         <li>
-                            <a href="#services">Projects</a>
+                            <a class="nav__link" href="#projects">Projects</a>
                         </li>
                         <li>
-                            <a href="#contact">contact</a>
+                            <a class="nav__link" href="#contact">contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -60,7 +60,7 @@
 
         <!--------- Start Home Section ---------->
         <section class="home" id="home">
-            <div class="container">
+            <div class="container" id="particles-js">
                 <div class="d-grid">
                     <div class="home-text">
                         <h1 data-aos="fade-up" data-aos-duration="1000">
@@ -464,7 +464,7 @@
     <!--------- End Wrapper ---------->
 
     <!-- Style switcher Start -->
-    <div class="style-switcher js-style-switcher">
+    <div class="style-switcher js-style-switcher" id="particles-js">
         <button type="button" class="style-switcher-toggler js-style-switcher-toggler">
             <i class="fa-solid fa-gear"></i>
         </button>
@@ -492,7 +492,10 @@
 
     <script src="./js/aos.js "></script>
     <script src="./js/style-switcher.js "></script>
+    <script src="./js/particles.js "></script>
+    <script src="./js/app.js "></script>
     <script src="./js/main.js "></script>
+
 </body>
 
 </html>

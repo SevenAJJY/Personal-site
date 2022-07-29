@@ -144,6 +144,15 @@ img {
     padding: 15px;
 }
 
+.container canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /************ Start Section Grid *************/
 
@@ -167,6 +176,7 @@ img {
     transform: translateX(-50%);
     font-size: 25px;
     transition: all .5s ease;
+    z-index: 0;
 }
 
 .go-down i {
@@ -388,6 +398,19 @@ img {
     color: var(--main-color);
 }
 
+.nav a.active::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    bottom: 6px;
+    left: 50%;
+    width: 50%;
+    height: 3px;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+}
+
+.nav li a.active,
 .nav a:hover {
     color: var(--main-color);
 }
@@ -443,7 +466,7 @@ img {
     width: 350px;
     border-radius: 51% 49% 51% 49% / 56% 62% 38% 44%;
     background-color: var(--main-color);
-    transform: translate(-50%, -50%);
+    transform: translate(-25%, -50%);
 }
 
 .home-img img {
@@ -1576,8 +1599,8 @@ textarea.contact__input {
         max-width: 320px;
     }
     .home-img .circle-wrap .circle {
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
     }
     /************ About *************/
     .about .about-img,
@@ -1652,7 +1675,7 @@ textarea.contact__input {
         background-color: var(--bg-color);
         padding: 60px 30px 30px;
         overflow-y: auto;
-        transform: translateX(70%);
+        transform: translateX(100%);
         transition: all .3s ease;
     }
     .nav.open {
@@ -1704,6 +1727,10 @@ textarea.contact__input {
     }
     .home-img img {
         margin: auto;
+    }
+    .home-img .circle-wrap .circle {
+        height: 200px;
+        width: 200px;
     }
     /************ About *************/
     .about .about-img,
