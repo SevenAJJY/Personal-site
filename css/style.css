@@ -211,7 +211,7 @@ img {
     height: 100%;
     width: 100%;
     background-color: var(--bg-body);
-    z-index: 100;
+    z-index: 200000;
     display: flex;
     justify-content: center;
     align-items: center;
