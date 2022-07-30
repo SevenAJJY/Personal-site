@@ -256,17 +256,3 @@ const linkAction = () => {
     })
 }
 linkAction();
-
-// // Active and remove menu
-// const navLink = document.querySelectorAll('.nav__link');
-
-// function linkAction() {
-//     //Actin link
-//     navLink.forEach(n => n.classList.remove('active'));
-//     this.classList.add('active');
-
-//     // remove show menu when i click in  the links
-//     const navMenu = document.getElementById('nav-menu');
-//     navMenu.classList.remove('show');
-// }
-// navLink.forEach(n => n.addEventListener('click', linkAction));
