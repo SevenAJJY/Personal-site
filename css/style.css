@@ -175,7 +175,7 @@ img {
   transform: translateX(-50%);
   font-size: 25px;
   transition: all 0.5s ease;
-  z-index: 0;
+  z-index: 3;
 }
 
 .go-down i {
@@ -208,7 +208,7 @@ img {
   height: 100%;
   width: 100%;
   background-color: var(--bg-body);
-  z-index: 2;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
