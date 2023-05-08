@@ -1,501 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/aos.css" />
     <link rel="stylesheet" href="./css/style-switcher.css" />
     <link rel="stylesheet" href="./css/style.css" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Preloader Start -->
     <div class="preloader js-preloader">
-        <div></div>
+      <div></div>
     </div>
     <!-- Preloader End -->
 
     <!---------- Start Wrapper --------->
     <div class="wrapper">
+      <!---------- Start Header Section --------->
+      <header class="header header-js">
+        <div class="container">
+          <div class="logo" data-aos="fade-down" data-aos-duration="1000">
+            <a href="#">Seven<span>AJJY</span></a>
+          </div>
+          <button
+            type="button"
+            class="nav-toggler js-nav-toggler"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <span></span>
+          </button>
+          <nav class="nav js-nav">
+            <ul data-aos="fade-down" data-aos-duration="1000">
+              <li>
+                <a class="nav__link active" href="#home">Home</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#about">About</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#skills">Skilles</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#services">Services</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#projects">Projects</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#contact">contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!--------- End Header Section ---------->
 
-        <!---------- Start Header Section --------->
-        <header class="header header-js">
-            <div class="container">
-                <div class="logo" data-aos="fade-down" data-aos-duration="1000">
-                    <a href="#">Seven<span>AJJY</span></a>
+      <!--------- Start Home Section ---------->
+      <section class="home" id="home">
+        <div class="container" id="particles-js">
+          <div class="d-grid override-particles">
+            <div class="home-text">
+              <h1 data-aos="fade-up" data-aos-duration="1000">
+                Hi,<br />
+                I'am
+                <span class="auto-typing">Yassine</span>
+              </h1>
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="150"
+              >
+                Web developer and designer, I love the field of informatics and
+                in the future I seek to develop the web.
+              </p>
+              <div
+                class="btn-wrap"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
+                <span>Know more</span>
+                <a class="btn" href="#about"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="home-img">
+              <div
+                class="circle-wrap"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="circle"></div>
+              </div>
+              <img
+                src="./imgs/home.svg"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="150"
+              />
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="go-down">
+          <i class="fa-solid fa-angles-down"></i>
+        </a>
+      </section>
+      <!--------- End Home Section ---------->
+
+      <!--------- Start About Section ---------->
+      <section class="about section-pending" id="about">
+        <div class="container">
+          <div class="d-grid">
+            <div class="about-img">
+              <div class="img-box" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="social-icons">
+                  <a
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    title="facebook"
+                    href="https://www.facebook.com/elhajjy.yassine"
+                    ><i class="fa-brands fa-facebook-square"></i
+                  ></a>
+                  <a
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    data-aos-delay="150"
+                    title="instagram"
+                    href="https://www.instagram.com/yassine_elhajjy/"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    data-aos-delay="300"
+                    title="linkedin"
+                    href="https://www.linkedin.com/in/yassine-elhajjy-bab1ba233/"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                  <a
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    data-aos-delay="350"
+                    title="github"
+                    href="https://github.com/SevenAJJY"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
                 </div>
-                <button type="button" class="nav-toggler js-nav-toggler" data-aos="fade-down" data-aos-duration="1000">
+                <img src="./imgs/sevenajjy.jpeg" alt="My Image" />
+              </div>
+            </div>
+            <div class="about-text">
+              <div class="section-title">
+                <span class="title" data-aos="fade-up" data-aos-duration="600"
+                  >About Me</span
+                >
+                <h1
+                  class="sub-title"
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                >
+                  Who I am
+                </h1>
+              </div>
+              <p data-aos="fade-up" data-aos-duration="600">
+                Web developer and designer, I love the field of informatics and
+                in the future I seek to develop the web.
+              </p>
+              <p data-aos="fade-up" data-aos-duration="600">
+                I am a very strict and motivated person who loves to face
+                challenges and difficulties and discover new technologies in the
+                world of programming.
+              </p>
+              <div
+                class="button btn"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="content">
+                  <i class="fa-solid i-change fa-cloud-arrow-down"></i>
+                  <a
+                    href="./assets/cv _yasssine_elhajjy.pdf"
+                    class="button-text"
+                    download=""
+                    >Download Cv</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------- End About Section ---------->
+
+      <!--------- Start Skills Section ---------->
+      <section class="skills section-pending" id="skills">
+        <div class="container">
+          <div class="section-title">
+            <span class="title" data-aos="fade-up" data-aos-duration="600"
+              >skills</span
+            >
+            <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">
+              My Skills
+            </h2>
+          </div>
+          <div class="d-grid">
+            <div class="skills_progress">
+              <h2
+                class="skills__subTitle"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                Profesional Skills
+              </h2>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-brands fa-html5 skills__icon"></i>
+                  <span class="skills__name">HTML5</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">95%</span>
+                </div>
+                <div class="skills__bar skills__html"></div>
+              </div>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-brands fa-css3-alt skills__icon"></i>
+                  <span class="skills__name">CSS3</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">85%</span>
+                </div>
+                <div class="skills__bar skills__css"></div>
+              </div>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-brands fa-js skills__icon"></i>
+                  <span class="skills__name">JAVASCRIPT</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">60%</span>
+                </div>
+                <div class="skills__bar skills__js"></div>
+              </div>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-brands fa-php skills__icon"></i>
+                  <span class="skills__name">PHP</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">90%</span>
+                </div>
+                <div class="skills__bar skills__php"></div>
+              </div>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-brands fa-java skills__icon"></i>
+                  <span class="skills__name">Java</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">50%</span>
+                </div>
+                <div class="skills__bar skills__java"></div>
+              </div>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-solid fa-database skills__icon"></i>
+                  <span class="skills__name">MySQL/SQL Server</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">80%</span>
+                </div>
+                <div class="skills__bar skills__sql"></div>
+              </div>
+              <div
+                class="skills__data"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="skills__names">
+                  <i class="fa-brands fa-python skills__icon"></i>
+                  <span class="skills__name">Python</span>
+                </div>
+                <div>
+                  <span class="skills__percentage">30%</span>
+                </div>
+                <div class="skills__bar skills__py"></div>
+              </div>
+              <div
+                class="skills__data last"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <p>. . .</p>
+              </div>
+            </div>
+            <div class="skills_img" data-aos="zoom-in" data-aos-duration="1000">
+              <img src="./imgs/skills.svg " class="skills__img" alt=" " />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------- End Skills Section ---------->
+
+      <!--------- Start Services Section ---------->
+      <section class="services section-pending" id="services">
+        <div class="container">
+          <div class="section-title">
+            <span class="title" data-aos="fade-up" data-aos-duration="600"
+              >Services</span
+            >
+            <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">
+              What i do
+            </h2>
+          </div>
+          <div class="grid">
+            <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600">
+              <div class="serviceBox">
+                <div class="serv-icon">
+                  <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <div class="serv-content">
+                  <h2>Web design</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet elit. Ipsa beatae provident
+                    impedit itaque ullam totam aliquid doloremque quaerat, quo
+                    saepe voluptatem.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="serv-boxes"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="150"
+            >
+              <div class="serviceBox">
+                <div class="serv-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="serv-content">
+                  <h2>Web development</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet elit. Ipsa beatae provident
+                    impedit itaque ullam totam aliquid doloremque quaerat, quo
+                    saepe voluptatem.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="serv-boxes"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
+              <div class="serviceBox">
+                <div class="serv-icon">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="serv-content">
+                  <h2>Mobile Application</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet elit. Ipsa beatae provident
+                    impedit itaque ullam totam aliquid doloremque quaerat, quo
+                    saepe voluptatem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------- End Services Section ---------->
+
+      <!--------- Start Projects Section ---------->
+      <section class="projects section-pending" id="projects">
+        <div class="container">
+          <div class="section-title">
+            <span class="title" data-aos="fade-up" data-aos-duration="600"
+              >Projectss</span
+            >
+            <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">
+              My Projects
+            </h2>
+          </div>
+          <ul class="projects-filter">
+            <li
+              class="list projects-filter-active"
+              data-filter="all"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
+              All
+            </li>
+            <li
+              class="list"
+              data-filter="mobile-app"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="150"
+            >
+              Mobile Application
+            </li>
+            <li
+              class="list"
+              data-filter="web-app"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
+              Web application
+            </li>
+            <li
+              class="list"
+              data-filter="design-app"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="350"
+            >
+              Web Design
+            </li>
+          </ul>
+          <div class="project">
+            <div
+              class="d-grid pro-grid"
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              data-aos-delay="350"
+            >
+              <div class="itemBox work__img" data-item="web-app">
+                <img src="./imgs/eCommerce.PNG" alt="" />
+                <div class="img-text">
+                  <h3>eCommerce Shop</h3>
+                  <small
+                    >HTML-CSS-JavaScript-Bootstrap 5-PHP
+                    Pure-MySQL-JQuery</small
+                  >
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="web-app">
+                <img src="./imgs/gestionCommande.PNG" alt="" />
+                <div class="img-text">
+                  <h3>gestion de commande</h3>
+                  <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL</small>
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="design-app">
+                <img src="./imgs/nadafa.PNG" alt="" />
+                <div class="img-text">
+                  <h3>Nadafa Services</h3>
+                  <small>HTML-CSS-JavaScript</small>
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="web-app">
+                <img src="./imgs/radop.PNG" alt="" />
+                <div class="img-text">
+                  <h3>gestion de paiement</h3>
+                  <small
+                    >HTML-CSS-JavaScript-Bootstrap 5-PHP
+                    Pure-MySQL-JQuery</small
+                  >
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="design-app">
+                <img src="./imgs/port.PNG" alt="" />
+                <div class="img-text">
+                  <h3>Portfolio</h3>
+                  <small>HTML-CSS-JavaScript</small>
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="web-app">
+                <img src="./imgs/eStore.PNG" alt="" />
+                <div class="img-text">
+                  <h3>e-store</h3>
+                  <small
+                    >HTML-CSS-JavaScript-Bootstrap 5-PHP
+                    Pure-MySQL-JQuery</small
+                  >
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="design-app">
+                <img src="./imgs/shoasApp.PNG" alt="" />
+                <div class="img-text">
+                  <h3>Shoas App</h3>
+                  <small>HTML-CSS-JavaScript</small>
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="design-app">
+                <img src="./imgs/leani.PNG" alt="" />
+                <div class="img-text">
+                  <h3>Portfolio</h3>
+                  <small>HTML-CSS</small>
+                </div>
+              </div>
+              <div class="itemBox work__img" data-item="design-app">
+                <img src="./imgs/port2.PNG" alt="" />
+                <div class="img-text">
+                  <h3>Portfolio</h3>
+                  <small>HTML-CSS</small>
+                </div>
+              </div>
+              <div class="itemBox work__img mobile-app" data-item="mobile-app">
+                <!-- <img src="./imgs/app-mobile.png" alt=""> -->
+                <div class="img-text">
+                  <h3>gestion d'employé</h3>
+                  <small>XML-Java-SQLite</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------- End Projects Section ---------->
+
+      <!--------- Start Contact Section ---------->
+      <section class="contact section-pendding" id="contact">
+        <div class="container">
+          <div class="section-title">
+            <span class="title" data-aos="fade-up" data-aos-duration="600"
+              >Contact</span
+            >
+            <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">
+              Contact With Me
+            </h2>
+          </div>
+          <div class="contact__container bd-grid">
+            <div class="contact__content">
+              <div class="left-side">
+                <div
+                  class="address details"
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div class="topic">Address</div>
+                  <div class="text-one">Marroco</div>
+                  <div class="text-two">Settat, Kamal 2</div>
+                </div>
+                <div
+                  class="phone details"
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                  <div class="topic">Phone</div>
+                  <div class="text-one">Number</div>
+                  <div class="text-two">+212709239818</div>
+                </div>
+                <div
+                  class="email details"
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <div class="topic">Email</div>
+                  <div class="text-one">yassine.elhajjy@gmail.com</div>
+                  <div class="text-two">ysnhajji3k@gmail.com</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <div
+                  class="topic-text"
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                >
+                  Send us a message
+                </div>
+                <p data-aos="fade-up" data-aos-duration="600">
+                  If to here any work from me or any types of queries , you can
+                  send me a message from here . It's my pleasure to help you.
+                </p>
+                <form action="" id="form" class="contact__form">
+                  <div
+                    class="inputBox"
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                  >
+                    <input
+                      type="text"
+                      id="fullname"
+                      class="contact__input"
+                      required
+                    />
+                    <span class="spn-floating">Full name</span>
+                    <i class="fa-solid fa-circle-check vfsixx"></i>
+                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                    <small>error message</small>
+                  </div>
+                  <div
+                    class="inputBox"
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                  >
+                    <input
+                      type="email"
+                      id="email"
+                      class="contact__input"
+                      required
+                    />
+                    <span class="spn-floating">Email</span>
+                    <i class="fa-solid fa-circle-check vfsixx"></i>
+                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                    <small>error message</small>
+                  </div>
+                  <div
+                    class="inputBox"
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                  >
+                    <input
+                      type="text"
+                      id="subject"
+                      class="contact__input"
+                      required
+                    />
+                    <span class="spn-floating">Subject</span>
+                    <i class="fa-solid fa-circle-check vfsixx"></i>
+                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                    <small>error message</small>
+                  </div>
+                  <div
+                    class="inputBox message"
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                  >
+                    <textarea
+                      name=""
+                      id="umessage"
+                      cols="30"
+                      rows="10"
+                      class="contact__input input-ms"
+                      required
+                    ></textarea>
+                    <span class="spn-floating">Write your message here</span>
+                    <div class="characters">
+                      <span class="signal_num">0</span>
+                      <span class="limit_num">/100</span>
+                    </div>
+                    <i class="fa-solid fa-circle-check vfsixx"></i>
+                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
+                    <small>error message</small>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="contact__button button_c"
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                  >
+                    Send Now
                     <span></span>
-                </button>
-                <nav class="nav js-nav">
-                    <ul data-aos="fade-down" data-aos-duration="1000">
-                        <li>
-                            <a class="nav__link active" href="#home">Home</a>
-                        </li>
-                        <li>
-                            <a class="nav__link" href="#about">About</a>
-                        </li>
-                        <li>
-                            <a class="nav__link" href="#skills">Skilles</a>
-                        </li>
-                        <li>
-                            <a class="nav__link" href="#services">Services</a>
-                        </li>
-                        <li>
-                            <a class="nav__link" href="#projects">Projects</a>
-                        </li>
-                        <li>
-                            <a class="nav__link" href="#contact">contact</a>
-                        </li>
-                    </ul>
-                </nav>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
             </div>
-        </header>
-        <!--------- End Header Section ---------->
+          </div>
+        </div>
+      </section>
+      <!--------- End Contact Section ---------->
 
-
-        <!--------- Start Home Section ---------->
-        <section class="home" id="home">
-            <div class="container" id="particles-js">
-                <div class="d-grid">
-                    <div class="home-text">
-                        <h1 data-aos="fade-up" data-aos-duration="1000">
-                            Hi,<br> I'am
-                            <span class="auto-typing">Yassine</span>
-                        </h1>
-                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">Web developer and designer, I love the field of informatics and in the future I seek to develop the web.</p>
-                        <div class="btn-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                            <span>Know more</span>
-                            <a class="btn" href="#about"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="home-img">
-                        <div class="circle-wrap" data-aos="fade-right" data-aos-duration="1000">
-                            <div class="circle"></div>
-                        </div>
-                        <img src="./imgs/home.svg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
-                    </div>
-                </div>
-            </div>
-            <a href="#about" class="go-down">
-                <i class="fa-solid fa-angles-down"></i>
-            </a>
-        </section>
-        <!--------- End Home Section ---------->
-
-
-        <!--------- Start About Section ---------->
-        <section class="about section-pending" id="about">
-            <div class="container">
-                <div class="d-grid">
-                    <div class="about-img">
-                        <div class="img-box" data-aos="zoom-in" data-aos-duration="1000">
-                            <div class="social-icons">
-                                <a data-aos="fade-up" data-aos-duration="600" title="facebook" href="https://www.facebook.com/elhajjy.yassine"><i class="fa-brands fa-facebook-square"></i></a>
-                                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="150" title="instagram" href="https://www.instagram.com/yassine_elhajjy/"><i class="fa-brands fa-instagram"></i></a>
-                                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" title="linkedin" href="https://www.linkedin.com/in/yassine-elhajjy-bab1ba233/"><i class="fa-brands fa-linkedin"></i></a>
-                                <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="350" title="github" href="https://github.com/SevenAJJY"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                            <img src="./imgs/sevenajjy.jpeg" alt="My Image" />
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <div class="section-title">
-                            <span class="title" data-aos="fade-up" data-aos-duration="600">About Me</span>
-                            <h1 class="sub-title" data-aos="fade-up" data-aos-duration="600">Who I am</h1>
-                        </div>
-                        <p data-aos="fade-up" data-aos-duration="600">Web developer and designer, I love the field of informatics and in the future I seek to develop the web.</p>
-                        <p data-aos="fade-up" data-aos-duration="600"> I am a very strict and motivated person who loves to face challenges and difficulties and discover new technologies in the world of programming.</p>
-                        <div class="button btn" data-aos="fade-up" data-aos-duration="600">
-                            <div class="content">
-                                <i class="fa-solid i-change fa-cloud-arrow-down"></i>
-                                <a href="./assets/my_cv.pdf" download="./assets/my_cv.pdf" class="button-text">Download Cv</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--------- End About Section ---------->
-
-
-        <!--------- Start Skills Section ---------->
-        <section class="skills section-pending" id="skills">
-            <div class="container">
-                <div class="section-title">
-                    <span class="title" data-aos="fade-up" data-aos-duration="600">skills</span>
-                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">My Skills</h2>
-                </div>
-                <div class="d-grid">
-                    <div class="skills_progress">
-                        <h2 class="skills__subTitle" data-aos="fade-up" data-aos-duration="600">Profesional Skills</h2>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-html5 skills__icon"></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                            <div class="skills__bar skills__html"></div>
-                        </div>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-css3-alt skills__icon"></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                            <div class="skills__bar skills__css"></div>
-                        </div>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-js skills__icon"></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div>
-                                <span class=" skills__percentage">60%</span>
-                            </div>
-                            <div class="skills__bar skills__js"></div>
-                        </div>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-php skills__icon"></i>
-                                <span class="skills__name">PHP</span>
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div>
-                            <div class="skills__bar skills__php"></div>
-                        </div>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-java skills__icon"></i>
-                                <span class="skills__name">Java</span>
-                            </div>
-                            <div>
-                                <span class="skills__percentage">50%</span>
-                            </div>
-                            <div class="skills__bar skills__java"></div>
-                        </div>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-solid fa-database skills__icon"></i>
-                                <span class="skills__name">MySQL/SQL Server</span>
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                            <div class="skills__bar skills__sql"></div>
-                        </div>
-                        <div class="skills__data" data-aos="fade-up" data-aos-duration="600">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-python skills__icon"></i>
-                                <span class="skills__name">Python</span>
-                            </div>
-                            <div>
-                                <span class="skills__percentage">30%</span>
-                            </div>
-                            <div class="skills__bar skills__py"></div>
-                        </div>
-                        <div class="skills__data last" data-aos="fade-up" data-aos-duration="600">
-                            <p>. . .</p>
-                        </div>
-                    </div>
-                    <div class="skills_img" data-aos="zoom-in" data-aos-duration="1000">
-                        <img src="./imgs/skills.svg " class="skills__img " alt=" ">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--------- End Skills Section ---------->
-
-        <!--------- Start Services Section ---------->
-        <section class="services section-pending" id="services">
-            <div class="container">
-                <div class="section-title">
-                    <span class="title" data-aos="fade-up" data-aos-duration="600">Services</span>
-                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">What i do</h2>
-                </div>
-                <div class="grid">
-                    <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600">
-                        <div class="serviceBox">
-                            <div class="serv-icon">
-                                <i class="fa-solid fa-pen-ruler"></i>
-                            </div>
-                            <div class="serv-content">
-                                <h2>Web design</h2>
-                                <p>Lorem ipsum dolor sit amet elit. Ipsa beatae provident impedit itaque ullam totam aliquid doloremque quaerat, quo saepe voluptatem.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
-                        <div class="serviceBox">
-                            <div class="serv-icon">
-                                <i class="fa-solid fa-code"></i>
-                            </div>
-                            <div class="serv-content">
-                                <h2>Web development</h2>
-                                <p>Lorem ipsum dolor sit amet elit. Ipsa beatae provident impedit itaque ullam totam aliquid doloremque quaerat, quo saepe voluptatem.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="serv-boxes" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                        <div class="serviceBox">
-                            <div class="serv-icon">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </div>
-                            <div class="serv-content">
-                                <h2>Mobile Application</h2>
-                                <p>Lorem ipsum dolor sit amet elit. Ipsa beatae provident impedit itaque ullam totam aliquid doloremque quaerat, quo saepe voluptatem.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--------- End Services Section ---------->
-
-
-        <!--------- Start Projects Section ---------->
-        <section class="projects section-pending" id="projects">
-            <div class="container">
-                <div class="section-title">
-                    <span class="title" data-aos="fade-up" data-aos-duration="600">Projectss</span>
-                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">My Projects</h2>
-                </div>
-                <ul class="projects-filter">
-                    <li class="list projects-filter-active" data-filter="all" data-aos="fade-up" data-aos-duration="600">All</li>
-                    <li class="list" data-filter="mobile-app" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">Mobile Application</li>
-                    <li class="list" data-filter="web-app" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Web application</li>
-                    <li class="list" data-filter="design-app" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">Web Design</li>
-                </ul>
-                <div class="project">
-                    <div class="d-grid pro-grid" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
-                        <div class="itemBox work__img" data-item="web-app">
-                            <img src="./imgs/eCommerce.PNG" alt="">
-                            <div class="img-text">
-                                <h3>eCommerce Shop</h3>
-                                <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="web-app">
-                            <img src="./imgs/gestionCommande.PNG" alt="">
-                            <div class="img-text">
-                                <h3>gestion de commande</h3>
-                                <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="design-app">
-                            <img src="./imgs/nadafa.PNG" alt="">
-                            <div class="img-text">
-                                <h3>Nadafa Services</h3>
-                                <small>HTML-CSS-JavaScript</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="web-app">
-                            <img src="./imgs/radop.PNG" alt="">
-                            <div class="img-text">
-                                <h3>gestion de paiement</h3>
-                                <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="design-app">
-                            <img src="./imgs/port.PNG" alt="">
-                            <div class="img-text">
-                                <h3>Portfolio</h3>
-                                <small>HTML-CSS-JavaScript</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="web-app">
-                            <img src="./imgs/eStore.PNG" alt="">
-                            <div class="img-text">
-                                <h3>e-store</h3>
-                                <small>HTML-CSS-JavaScript-Bootstrap 5-PHP Pure-MySQL-JQuery</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="design-app">
-                            <img src="./imgs/shoasApp.PNG" alt="">
-                            <div class="img-text">
-                                <h3>Shoas App</h3>
-                                <small>HTML-CSS-JavaScript</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="design-app">
-                            <img src="./imgs/leani.PNG" alt="">
-                            <div class="img-text ">
-                                <h3>Portfolio</h3>
-                                <small>HTML-CSS</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img" data-item="design-app">
-                            <img src="./imgs/port2.PNG" alt="">
-                            <div class="img-text ">
-                                <h3>Portfolio</h3>
-                                <small>HTML-CSS</small>
-                            </div>
-                        </div>
-                        <div class="itemBox work__img mobile-app" data-item="mobile-app">
-                            <!-- <img src="./imgs/app-mobile.png" alt=""> -->
-                            <div class="img-text ">
-                                <h3>gestion d'employé </h3>
-                                <small>XML-Java-SQLite</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--------- End Projects Section ---------->
-
-
-        <!--------- Start Contact Section ---------->
-        <section class="contact section-pendding" id="contact">
-            <div class="container">
-                <div class="section-title">
-                    <span class="title" data-aos="fade-up" data-aos-duration="600">Contact</span>
-                    <h2 class="sub-title" data-aos="fade-up" data-aos-duration="600">Contact With Me</h2>
-                </div>
-                <div class="contact__container bd-grid">
-                    <div class="contact__content">
-                        <div class="left-side">
-                            <div class="address details" data-aos="fade-up" data-aos-duration="600">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <div class="topic">Address</div>
-                                <div class="text-one">Marroco</div>
-                                <div class="text-two">Settat, Kamal 2</div>
-                            </div>
-                            <div class="phone details" data-aos="fade-up" data-aos-duration="600">
-                                <i class="fa-solid fa-phone"></i>
-                                <div class="topic">Phone</div>
-                                <div class="text-one">Number</div>
-                                <div class="text-two">+212709239818</div>
-                            </div>
-                            <div class="email details" data-aos="fade-up" data-aos-duration="600">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div class="topic">Email</div>
-                                <div class="text-one">yassine.elhajjy@gmail.com</div>
-                                <div class="text-two">ysnhajji3k@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="right-side">
-                            <div class="topic-text" data-aos="fade-up" data-aos-duration="600">Send us a message</div>
-                            <p data-aos="fade-up" data-aos-duration="600">If to here any work from me or any types of queries , you can send me a message from here . It's my pleasure to help you.</p>
-                            <form action="" id="form" class="contact__form">
-                                <div class="inputBox" data-aos="fade-up" data-aos-duration="600">
-                                    <input type="text" id="fullname" class="contact__input" required>
-                                    <span class="spn-floating">Full name</span>
-                                    <i class="fa-solid fa-circle-check vfsixx"></i>
-                                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
-                                    <small>error message</small>
-                                </div>
-                                <div class="inputBox" data-aos="fade-up" data-aos-duration="600">
-                                    <input type="email" id="email" class="contact__input" required>
-                                    <span class="spn-floating">Email</span>
-                                    <i class="fa-solid fa-circle-check vfsixx"></i>
-                                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
-                                    <small>error message</small>
-                                </div>
-                                <div class="inputBox" data-aos="fade-up" data-aos-duration="600">
-                                    <input type="text" id="subject" class="contact__input" required>
-                                    <span class="spn-floating">Subject</span>
-                                    <i class="fa-solid fa-circle-check vfsixx"></i>
-                                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
-                                    <small>error message</small>
-                                </div>
-                                <div class="inputBox message" data-aos="fade-up" data-aos-duration="600">
-                                    <textarea name="" id="umessage" cols="30" rows="10" class="contact__input input-ms " required></textarea>
-                                    <span class="spn-floating">Write your message here</span>
-                                    <div class="characters">
-                                        <span class="signal_num">0</span>
-                                        <span class="limit_num">/100</span>
-                                    </div>
-                                    <i class="fa-solid fa-circle-check vfsixx"></i>
-                                    <i class="fa-solid fa-circle-exclamation vfeixx"></i>
-                                    <small>error message</small>
-                                </div>
-
-                                <button type="submit" class="contact__button button_c" data-aos="fade-up" data-aos-duration="600">
-                                    Send Now
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <i class="fa-solid fa-paper-plane"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--------- End Contact Section ---------->
-
-
-        <!--------- Start Footer Section ---------->
-        <footer class="footer">
-            <div class="footer__title logo">
-                <a href="#">Seven<span>AJJY</span></a>
-            </div>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/elhajjy.yassine" class="footer__icon facebook">
-                    <i class="fa-brands fa-facebook-square"></i>
-                </a>
-                <a href="https://www.instagram.com/yassine_elhajjy/" class="footer__icon insta">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/yassine-elhajjy-bab1ba233/" class="footer__icon linkedin">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/SevenAJJY" class="footer__icon github">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-            <span>copyright &#169; 2022 SevenAJJY - all right reserved .</span>
-        </footer>
-        <!--------- End Footer Section ---------->
-
+      <!--------- Start Footer Section ---------->
+      <footer class="footer">
+        <div class="footer__title logo">
+          <a href="#">Seven<span>AJJY</span></a>
+        </div>
+        <div class="footer__social">
+          <a
+            href="https://www.facebook.com/elhajjy.yassine"
+            class="footer__icon facebook"
+          >
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/yassine_elhajjy/"
+            class="footer__icon insta"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yassine-elhajjy-bab1ba233/"
+            class="footer__icon linkedin"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/SevenAJJY" class="footer__icon github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <span>copyright &#169; 2022 SevenAJJY - all right reserved .</span>
+      </footer>
+      <!--------- End Footer Section ---------->
     </div>
     <!--------- End Wrapper ---------->
 
     <!-- Style switcher Start -->
     <div class="style-switcher js-style-switcher" id="particles-js">
-        <button type="button" class="style-switcher-toggler js-style-switcher-toggler">
-            <i class="fa-solid fa-gear"></i>
-        </button>
-        <div class="style-switcher-main">
-            <h2>Style switcher</h2>
-            <div class="style-switcher-item">
-                <p>Theme color</p>
-                <div class="theme-color">
-                    <input type="range" min="0" max="360" class="hue-slider js-hue-slider" />
-                    <div class="hue">Hue: <span class="js-hue"></span></div>
-                </div>
-            </div>
-            <div class="style-switcher-item">
-                <label class="form-switcher">
-                    <span>Dark Mode</span>
-                    <input type="checkbox" class="js-dark-mode" />
-                    <div class="box"></div>
-                </label>
-            </div>
+      <button
+        type="button"
+        class="style-switcher-toggler js-style-switcher-toggler"
+      >
+        <i class="fa-solid fa-gear"></i>
+      </button>
+      <div class="style-switcher-main">
+        <h2>Style switcher</h2>
+        <div class="style-switcher-item">
+          <p>Theme color</p>
+          <div class="theme-color">
+            <input
+              type="range"
+              min="0"
+              max="360"
+              class="hue-slider js-hue-slider"
+            />
+            <div class="hue">Hue: <span class="js-hue"></span></div>
+          </div>
         </div>
+        <div class="style-switcher-item">
+          <label class="form-switcher">
+            <span>Dark Mode</span>
+            <input type="checkbox" class="js-dark-mode" />
+            <div class="box"></div>
+          </label>
+        </div>
+      </div>
     </div>
     <!-- Style switcher End -->
-
-
 
     <script src="./js/aos.js "></script>
     <script src="./js/style-switcher.js "></script>
     <script src="./js/particles.js "></script>
     <script src="./js/app.js "></script>
     <script src="./js/main.js "></script>
-
-</body>
-
+  </body>
 </html>
