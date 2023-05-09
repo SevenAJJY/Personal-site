@@ -291,7 +291,7 @@ img {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 100;
 }
 
 .header::before {
